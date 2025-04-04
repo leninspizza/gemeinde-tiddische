@@ -1,0 +1,81 @@
+/* Tiddische-spezifisches Design basierend auf dem Original */
+:root {
+  --clr-red: hsl(9, 79%, 53%);     /* Original-Rot der Website */
+  --clr-yellow: hsl(44, 96%, 56%); /* Original-Gelb der Website */
+  --clr-blue: hsl(233, 43%, 30%);  /* Original-Blau der Website */
+}
+
+/* Primäre Farben */
+.btn-template-main, .btn-template-primary {
+  background-color: var(--clr-red);
+  color: white;
+}
+
+.btn-template-main:hover, .btn-template-primary:hover {
+  background-color: var(--clr-yellow);
+  color: var(--clr-blue);
+}
+
+/* Footer */
+#footer {
+  background-color: var(--clr-blue);
+}
+
+/* Navbar */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: var(--clr-red);
+}
+
+/* Box mit Headern (für CTA-Bereiche) */
+.box-simple {
+  border-top: 5px solid var(--clr-red);
+}
+
+.box-simple:hover .icon {
+  color: var(--clr-red);
+}
+
+/* Breadcrumbs und andere Elemente */
+#heading-breadcrumbs {
+  background-color: var(--clr-red);
+  color: white;
+}
+
+#heading-breadcrumbs h1 {
+  color: white;
+}
+
+/* Überschriften */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--clr-blue);
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+  color: var(--clr-red);
+}
+
+/* Top-Bar */
+.top-bar {
+  background: var(--clr-blue);
+  color: white;
+}
+
+.top-bar a {
+  color: var(--clr-yellow);
+}
+
+.top-bar a:hover {
+  color: white;
+}
+
+/* Carousel */
+.home-carousel .owl-carousel .owl-prev,
+.home-carousel .owl-carousel .owl-next {
+  background-color: var(--clr-red);
+}
+
+.home-carousel .owl-carousel .owl-prev:hover,
+.home-carousel .owl-carousel .owl-next:hover {
+  background-color: var(--clr-yellow);
+}

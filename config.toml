@@ -1,0 +1,94 @@
+baseURL = "https://www.gemeinde-tiddische.de/"
+languageCode = "de-de"
+defaultContentLanguage = "de"
+title = "Gemeinde Tiddische"
+theme = "universal"
+
+# Seitenabschnitte
+[params]
+    mainSections = ["aktuelles"]
+    viewMorePostLink = "/aktuelles/"
+    author = "Gemeinde Tiddische"
+    defaultKeywords = ["Tiddische", "Gemeinde", "Hoitlingen"]
+    defaultDescription = "Die offizielle Website der Gemeinde Tiddische"
+    
+    # Stil und Farben - werden später angepasst
+    style = "default"
+    
+    # Kontaktdaten - können angepasst werden
+    email = "gemeinde@tiddische.de"
+    phone = "+49 5366 969943"
+    address = """<p>Am Sportplatz 11
+        <br>38473 Tiddische
+        <br>Deutschland
+      </p>
+      """
+
+    # Öffnungszeiten formatieren
+    openingHours = """<p>Montag und Mittwoch: 8:00-11:00 Uhr</p>
+                      <p>Sprechzeiten des Bürgermeisters:
+                      <br>Montag im DGH Hoitlingen: 18:15-19:15 Uhr
+                      <br>im Bürgerhaus Tiddische: 19:30-20:30 Uhr</p>
+                   """
+    
+    # Logo
+    logo = "images/wappen.png"
+    logo_small = "images/wappen.png"
+
+    # Eigenes CSS
+    custom_css = ["css/tiddische.css"]
+
+# Hauptnavigation
+[[menu.main]]
+    name = "Startseite"
+    identifier = "home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Aktuelles"
+    identifier = "aktuelles"
+    url = "/aktuelles/"
+    weight = 2
+
+[[menu.main]]
+    name = "Veranstaltungen"
+    identifier = "veranstaltungen"
+    url = "/veranstaltungen/"
+    weight = 3
+
+[[menu.main]]
+    name = "Vereine"
+    identifier = "vereine"
+    url = "/vereine/"
+    weight = 4
+
+[[menu.main]]
+    name = "Ratsmitglieder"
+    identifier = "ratsmitglieder"
+    url = "/ratsmitglieder/"
+    weight = 5
+
+[[menu.main]]
+    name = "Bauen"
+    identifier = "bauen"
+    url = "/bauen/"
+    weight = 6
+
+[[menu.main]]
+    name = "Satzungen"
+    identifier = "satzungen"
+    url = "/satzungen/"
+    weight = 7
+
+[[menu.main]]
+    name = "Nahwärme"
+    identifier = "nahwaerme"
+    url = "/nahwaerme/"
+    weight = 8
+
+[[menu.main]]
+    name = "Kontakt"
+    identifier = "kontakt"
+    url = "/kontakt/"
+    weight = 9

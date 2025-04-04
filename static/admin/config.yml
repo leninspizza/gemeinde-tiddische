@@ -1,0 +1,76 @@
+backend:
+  name: git-gateway
+  branch: master  
+# Beachte: 'master' statt 'main', entsprechend deinem lokalen Branch
+
+publish_mode: editorial_workflow
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+# Optionale lokale Backend-Einstellung für Tests
+local_backend: true
+
+collections:
+  - name: "aktuelles"
+    label: "Aktuelles"
+    folder: "content/aktuelles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Datum", name: "date", widget: "datetime"}
+      - {label: "Beschreibung", name: "description", widget: "text"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Bild", name: "image", widget: "image", required: false}
+      - {label: "Inhalt", name: "body", widget: "markdown"}
+
+  - name: "veranstaltungen"
+    label: "Veranstaltungen"
+    folder: "content/veranstaltungen"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Datum", name: "date", widget: "datetime"}
+      - {label: "Veranstaltungsdatum", name: "event_date", widget: "datetime"}
+      - {label: "Beschreibung", name: "description", widget: "text"}
+      - {label: "Ort", name: "location", widget: "string"}
+      - {label: "Bild", name: "image", widget: "image", required: false}
+      - {label: "Inhalt", name: "body", widget: "markdown"}
+
+  - name: "vereine"
+    label: "Vereine"
+    folder: "content/vereine"
+    create: true
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Beschreibung", name: "description", widget: "text"}
+      - {label: "Ort", name: "location", widget: "select", options: ["Tiddische", "Hoitlingen"]}
+      - {label: "Kontaktperson", name: "contact_person", widget: "string", required: false}
+      - {label: "Telefon", name: "phone", widget: "string", required: false}
+      - {label: "E-Mail", name: "email", widget: "string", required: false}
+      - {label: "Website", name: "website", widget: "string", required: false}
+      - {label: "Bild", name: "image", widget: "image", required: false}
+      - {label: "Inhalt", name: "body", widget: "markdown"}
+
+  - name: "seiten"
+    label: "Seiten"
+    files:
+      - file: "content/_index.md"
+        label: "Startseite"
+        name: "home"
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Beschreibung", name: "description", widget: "text"}
+          - {label: "Inhalt", name: "body", widget: "markdown"}
+      
+      - file: "content/nahwaerme/_index.md"
+        label: "Nahwärme"
+        name: "nahwaerme"
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Beschreibung", name: "description", widget: "text"}
+          - {label: "Inhalt", name: "body", widget: "markdown"}

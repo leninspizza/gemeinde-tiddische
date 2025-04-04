@@ -1,0 +1,139 @@
+baseURL = "http://localhost:1313/"
+languageCode = "de-de"
+defaultContentLanguage = "de"
+title = "Gemeinde Tiddische"
+theme = "universal"
+
+# Define the number of posts per page
+[pagination]
+pagerSize = 10
+
+# Main menu
+[[menu.main]]
+    name       = "Startseite"
+    identifier = "home"
+    url        = "/"
+    weight     = 1
+
+[[menu.main]]
+    name       = "Aktuelles"
+    identifier = "aktuelles"
+    url        = "/aktuelles/"
+    weight     = 2
+
+[[menu.main]]
+    name       = "Veranstaltungen"
+    identifier = "veranstaltungen"
+    url        = "/veranstaltungen/"
+    weight     = 3
+
+[[menu.main]]
+    name       = "Vereine"
+    identifier = "vereine"
+    url        = "/vereine/"
+    weight     = 4
+
+[[menu.main]]
+    name       = "Ratsmitglieder"
+    identifier = "ratsmitglieder"
+    url        = "/ratsmitglieder/"
+    weight     = 5
+
+[[menu.main]]
+    name       = "Bauen"
+    identifier = "bauen"
+    url        = "/bauen/"
+    weight     = 6
+
+[[menu.main]]
+    name       = "Satzungen"
+    identifier = "satzungen"
+    url        = "/satzungen/"
+    weight     = 7
+
+[[menu.main]]
+    name       = "Nahwärme"
+    identifier = "nahwaerme"
+    url        = "/nahwaerme/"
+    weight     = 8
+
+[[menu.main]]
+    name       = "Kontakt"
+    identifier = "kontakt"
+    url        = "/kontakt/"
+    weight     = 9
+
+# Top bar social links menu
+[[menu.topbar]]
+    weight = 1
+    name = "Telefon"
+    url = "tel:+49 5366 969943"
+    pre = "<i class='fas fa-2x fa-phone'></i>"
+
+[[menu.topbar]]
+    weight = 5
+    name = "Email"
+    url = "mailto:gemeinde@tiddische.de"
+    pre = "<i class='fas fa-2x fa-envelope'></i>"
+
+[params]
+    viewMorePostLink = "/aktuelles/"
+    author = "Gemeinde Tiddische"
+    defaultKeywords = ["Gemeinde Tiddische", "Tiddische", "Hoitlingen"]
+    mainSections = ["aktuelles"]
+    defaultDescription = "Website Gemeinde Tiddische"
+
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    style = "default"
+  custom_css = ["css/tiddische.css"]
+
+    about_us = "<p>Die offizielle Website der Gemeinde Tiddische</p>"
+    copyright = "Copyright (c) Gemeinde Tiddische"
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
+    logo = "img/wappen.png"
+    logo_small = "img/wappen-small.png"
+    address = """<p class="text-uppercase"><strong>Gemeinde Tiddische</strong>
+        <br>Am Sportplatz 11
+        <br>38473 Tiddische
+        <br>Deutschland
+      </p>
+      """
+
+# Enable or disable top bar with social icons
+[params.topbar]
+    enable = true
+    text = """<p class="hidden-sm hidden-xs">Kontakt: Tel: +49 5366 969943 oder gemeinde@tiddische.de</p>
+      <p class="hidden-md hidden-lg"><a href="tel:+49 5366 969943" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+      <a href="mailto:gemeinde@tiddische.de" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
+      </p>
+      """
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    categories = true
+    tags = true
+    search = true
+
+[params.carousel]
+    enable = true
+    # All carousel items are defined in their own files. You can find example items
+    # at 'exampleSite/data/carousel'.
+    # For more information take a look at the README.
+
+[params.features]
+    enable = true
+    # All features are defined in their own files. You can find example items
+    # at 'exampleSite/data/features'.
+    # For more information take a look at the README.
+
+[params.recent_posts]
+    enable = true
+    title = "Aktuelles"
+    subtitle = "Aktuelle Neuigkeiten und Veranstaltungen aus der Gemeinde Tiddische"
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
